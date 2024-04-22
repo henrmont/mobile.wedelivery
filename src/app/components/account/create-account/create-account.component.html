@@ -1,0 +1,23 @@
+<form style="display: flex; flex-direction: column;">
+  <ion-input label="Email" type="text" label-placement="stacked" fill="outline" placeholder="Digite seu email"></ion-input>
+  <ion-input label="Senha" type="password" label-placement="stacked" fill="outline" placeholder="Digite sua senha" style="margin-top: 20px;" #input>
+    <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="toggleShow()">
+      @if (showPassword) {
+        <ion-icon slot="icon-only" name="eye-off-outline" aria-hidden="true"></ion-icon>
+      } @else {
+        <ion-icon slot="icon-only" name="eye-outline" aria-hidden="true"></ion-icon>
+      }
+    </ion-button>
+  </ion-input>
+  <ion-input label="Confirmar senha" type="password" label-placement="stacked" fill="outline" placeholder="Digite sua senha novamente" style="margin-top: 20px;" #confirmInput>
+    <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="toggleShowConfirm()">
+      @if (showConfirmPassword) {
+        <ion-icon slot="icon-only" name="eye-off-outline" aria-hidden="true"></ion-icon>
+      } @else {
+        <ion-icon slot="icon-only" name="eye-outline" aria-hidden="true"></ion-icon>
+      }
+    </ion-button>
+  </ion-input>
+  <ion-button expand="block" style="margin-top: 20px;">Criar conta</ion-button>
+  <ion-button expand="block" style="margin-top: 20px;" [routerLink]="['/login/account']" routerDirection="back">Voltar</ion-button>
+</form>

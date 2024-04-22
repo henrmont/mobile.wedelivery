@@ -1,0 +1,14 @@
+<form style="display: flex; flex-direction: column;">
+  <!-- <ion-input label="Email" type="text" label-placement="stacked" fill="outline" placeholder="Digite seu email"></ion-input> -->
+  <ion-input label="Senha" type="password" label-placement="stacked" fill="outline" placeholder="Digite sua senha" style="margin-top: 20px;" #input>
+    <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="toggleShow()">
+      @if (showPassword) {
+        <ion-icon slot="icon-only" name="eye-off-outline" aria-hidden="true"></ion-icon>
+      } @else {
+        <ion-icon slot="icon-only" name="eye-outline" aria-hidden="true"></ion-icon>
+      }
+    </ion-button>
+  </ion-input>
+  <ion-button expand="block" style="margin-top: 20px;" [routerLink]="['/main']">Desbloquear</ion-button>
+  <ion-button expand="block" style="margin-top: 20px;" [routerLink]="['/login/account']" routerDirection="back">Entrar com outra conta</ion-button>
+</form>
